@@ -13,3 +13,4 @@
     - [字典](chapter06/dict.py)
 - [字符串](chapter07/str.py)
 - [函数](chapter08/function.py)
+- [类与对象](chapter09/object.py)
