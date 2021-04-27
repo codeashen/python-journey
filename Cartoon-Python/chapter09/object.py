@@ -11,37 +11,37 @@ print('########################## 类的成员 #########################')
 #      ┌───┴───┐            ┌───┴───┐
 #   实例变量   类变量      实例方法   类方法
 
-class Dog:
+class Account1:
 
-    # 类变量
-    category = '犬类'
+    # 利率【类变量】
+    interest_rate = 0.0568
 
-    # 构造方法
-    def __init__(self, name, age, sex='female'):
-        self.name = name        # 创建和初始化实例变量 name
-        self.age = age          # 创建和初始化实例变量 age
-        self.sex = sex          # 创建和初始化实例变量 sex
+    # 【构造方法】
+    def __init__(self, owner, amount=0):
+        self.owner = owner      # 创建和初始化实例变量 owner
+        self.amount = amount    # 创建和初始化实例变量 amount
 
-    # 类方法
+    # 计算利息【类方法】
     @classmethod
-    def look(cls, house):
-        print('狗会看家, 可以看护{}'.format(house))
+    def interest_by(cls, amt, year):
+        # 可以改为 Account1.interest_rate * amt
+        return cls.interest_rate * amt * year
 
-    # 实例方法
-    def run(self):
-        print('{}在跑'.format(self.name))
+    # 查询账户余额【实例方法】
+    def query(self):
+        print('{} 账户金额: {}'.format(self.owner, self.amount))
 
-    # 实例方法
-    def eat(self, food):
-        print('{}在吃{}'.format(self.name, food))
+    # 存钱【实例方法】
+    def save(self, amt):
+        self.amount = self.amount + amt
+        print("成功存入 {}, 当前金额: {}".format(amt, self.amount))
 
 # 通过类访问类方法
-Dog.look('别墅')
+print("利率为: {}".format(Account1.interest_rate))
+m = Account1.interest_by(10000, 2)
+print("10000元存两年利息: {}".format(m))
 
 # 通过对象访问实例方法
-bai = Dog('小白', 3)
-bai.run()
-bai.eat('肉')
-
-
-print('########################## 封装 #########################')
+bob = Account1('Bob', 10000)
+bob.query()
+bob.save(500)
