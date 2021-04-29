@@ -19,3 +19,7 @@
     - [继承](chapter09/inheritance.py)
     - [多态](chapter09/polymorphism.py)
 - [异常处理](chapter10/exception.py)
+- [常见内置模块](chapter11)
+    - [math](chapter11/_math.py)
+    - [datetime](chapter11/_datetime.py)
+    - [re](chapter11/_re.py)
