@@ -1,4 +1,5 @@
 import wx
+
 # windows运行命令安装wx: pip install wxPython
 
 # 自定义窗口类
@@ -22,19 +23,19 @@ class MyFrame(wx.Frame):
         # 创建水平方向的盒子布局管理器 hbox 对象
         hbox = wx.BoxSizer(wx.HORIZONTAL)
         # 添加 b1, b2 到 hbox
-        hbox.Add(b1, proportion=1, flag=wx.EXPAND|wx.ALL, border=10)
-        hbox.Add(b2, proportion=1, flag=wx.EXPAND|wx.ALL, border=10)
+        hbox.Add(b1, proportion=1, flag=wx.EXPAND | wx.ALL, border=10)
+        hbox.Add(b2, proportion=1, flag=wx.EXPAND | wx.ALL, border=10)
 
         # 创建垂直方向盒子布局对象 vbox
         vbox = wx.BoxSizer(wx.VERTICAL)
         vbox.Add(self.statictext, proportion=1,
-                 flag=wx.CENTER|wx.FIXED_MINSIZE|wx.TOP, border=10)
-        vbox.Add(userid, flag=wx.EXPAND|wx.LEFT, border=10)
-        vbox.Add(tc1, flag=wx.EXPAND|wx.ALL, border=10)
-        vbox.Add(pwd, flag=wx.EXPAND|wx.LEFT, border=10)
-        vbox.Add(tc2, flag=wx.EXPAND|wx.ALL, border=10)
-        vbox.Add(content, flag=wx.EXPAND|wx.LEFT, border=10)
-        vbox.Add(tc3, flag=wx.EXPAND|wx.ALL, border=10)
+                 flag=wx.CENTER | wx.FIXED_MINSIZE | wx.TOP, border=10)
+        vbox.Add(userid, flag=wx.EXPAND | wx.LEFT, border=10)
+        vbox.Add(tc1, flag=wx.EXPAND | wx.ALL, border=10)
+        vbox.Add(pwd, flag=wx.EXPAND | wx.LEFT, border=10)
+        vbox.Add(tc2, flag=wx.EXPAND | wx.ALL, border=10)
+        vbox.Add(content, flag=wx.EXPAND | wx.LEFT, border=10)
+        vbox.Add(tc3, flag=wx.EXPAND | wx.ALL, border=10)
         vbox.Add(hbox, proportion=1, flag=wx.CENTER)
 
         # 设置面板 panel 采用 vbox 布局

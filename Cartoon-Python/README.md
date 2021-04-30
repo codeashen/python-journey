@@ -26,3 +26,7 @@
 - [文件读写](chapter12/file.py)
 - [用户图形界面](chapter13/gui.py)
 - [网络通信](chapter14/network.py)
+- [数据库交互](chapter15/sql.py)
+- [多线程](chapter16)
+    - [创建线程](chapter16/thread.py)
+    - [线程管理](chapter16/join.py)
