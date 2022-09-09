@@ -1,0 +1,12 @@
+2020-03-29 08:52:02,400 package_log.py 12 INFO 这是第一个记录的日志信息
+2020-03-29 08:52:02,400 package_log.py 13 WARNING 这是一个警告
+2020-03-29 08:52:02,400 package_log.py 14 ERROR 这是一个重大的错误信息
+2020-03-29 08:52:34,238 package_log.py 12 INFO 这是第一个记录的日志信息
+2020-03-29 08:52:34,239 package_log.py 13 WARNING 这是一个警告
+2020-03-29 08:52:34,239 package_log.py 14 ERROR 这是一个重大的错误信息
+2020-03-29 09:13:59,402 package_log.py 23 INFO 这是第一个记录的日志信息
+2020-03-29 09:13:59,403 package_log.py 24 WARNING 这是一个警告
+2020-03-29 09:13:59,403 package_log.py 25 ERROR 这是一个重大的错误信息
+2020-03-29 09:14:07,146 package_log.py 23 INFO 这是第一个记录的日志信息
+2020-03-29 09:14:07,146 package_log.py 24 WARNING 这是一个警告
+2020-03-29 09:14:07,146 package_log.py 25 ERROR 这是一个重大的错误信息
