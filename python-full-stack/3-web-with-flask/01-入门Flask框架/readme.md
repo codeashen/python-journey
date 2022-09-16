@@ -2,22 +2,15 @@
 
 1. 设置环境变量
 
-   - Windows: `set FLASK_APP=app.py`
-   - Linux: `export FLASK_APP=app.py`
+   Windows: `set FLASK_APP=app.py`
+
+   Linux: `export FLASK_APP=app.py`
 
 2. flask run 启动内置 web 服务器
 
-   指定 IP 及端口：
+   指定 IP 及端口：`flask run --host=0.0.0.0 --port=8001`
 
-    ```
-    flask run --host=0.0.0.0 --port=8001 
-    ```
-
-   或：
-
-    ```angular2html
-    flask run -h 0.0.0.0 -p 8001 
-    ```
+   或：`flask run -h 0.0.0.0 -p 8001`
 
 ### 开启调试模式
 
@@ -25,8 +18,9 @@
 
 1. 设置环境变量
 
-   - Windows: `set FLASK_ENV=development`
-   - Linux: `export FLASK_ENV=development`
+   Windows: `set FLASK_ENV=development`
+
+   Linux: `export FLASK_ENV=development`
 
 2. flask run 启动 web 服务器
 
