@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>1. 简单数据类型的渲染</h3>
+<p>我的年龄: {{ age }}</p>
+<p>我的钱包: {{ money }}</p>
+<p>我的名字：{{ name }}</p>
+
+<h3>2. 用户信息 dict</h3>
+<p>用户名： {{ user_info.username }}</p>
+<p>用户昵称： {{ user_info.nickname }}</p>
+<p>用户的地址：{{ user_info['address.city'] }}- {{ user_info['address.area'] }}</p>
+
+<h3>3. 元组和列表</h3>
+<p>
+    {{ tuple_city[0] }} <br/>
+    {{ tuple_city[1] }} <br/>
+    {{ tuple_city[2] }} <br/>
+    {{ tuple_city[3] }} <br/>
+</p>
+<p>
+    {{ list_city[0] }} <br/>
+    {{ list_city[1] }} <br/>
+    {{ list_city[2] }} <br/>
+    {{ list_city[3] }} <br/>
+</p>
+
+<h3>4. 复杂的数据结构</h3>
+<p>
+    第一个：<br/>
+    用户名：{{ list_user[0].username }};地址： {{ list_user[0]['address']['city'] }}
+</p>
+<p>
+    第二个：<br/>
+    用户名：{{ list_user[1].username }};地址： {{ list_user[1]['address']['city'] }}
+</p>
+</body>
+</html>

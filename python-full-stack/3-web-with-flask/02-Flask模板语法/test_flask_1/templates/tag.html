@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模板标签的使用</title>
+    <style type="text/css">
+        .odd {
+            background-color: #f00;
+            color: #fff;
+        }
+
+        .even {
+            background-color: aqua;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<h3>if 的使用</h3>
+{% if var is none %}
+<p>var 是 none</p>
+{% else %}
+<p>var 不是 none</p>
+{% endif %}
+
+{% if a is defined %}
+<p>a定义了</p>
+{% else %}
+<p> a 没有定义</p>
+{% endif %}
+{% if a == 2 %}
+<p>a 是 2</p>
+{% endif %}
+
+<h3>for循环的使用</h3>
+{% for item in list_user %}
+<p>用户名：{{ item.username }}，年龄：{{ item.age }}</p>
+{% else %}
+<p>用户信息为空</p>
+{% endfor %}
+
+<h3>for 循环 dict</h3>
+{% for user in list_user %}
+<p class="{{ loop.cycle('odd','even') }}">
+    第{{ loop.index }}个用户，总共{{ loop.length }}个：<br/>
+    {% for key, value in user.items() %}
+    {{ key }}: {{ value }}
+    {% endfor %}
+</p>
+{% else %}
+<p>用户信息为空</p>
+{% endfor %}
+
+<h3>for 循环 dict -break</h3>
+{% for user in list_user -%}
+<p class="{{ loop.cycle('odd','even') }}">
+    第{{ loop.index }}个用户，总共{{ loop.length }}个：<br/>
+    {% for key, value in user.items() -%}
+    {% if loop.index > 2 -%}
+    {% break -%}
+    {% endif -%}
+    {{ key }}: {{ value }}
+    {% endfor -%}
+</p>
+{% else %}
+<p>用户信息为空</p>
+{% endfor %}
+
+<!-- 我是HTML注释 -->
+{# 我是模板注释 #}
+<h3>赋值的使用</h3>
+{% with %}
+{% set temp = 43 %}
+{{ temp }}
+{% endwith %}
+<p>在with块之外{{ temp }}</p>
+
+<h3>模板语法的转义</h3>
+{{ '{{' }}
+{% raw %}
+{% with %}
+{% set temp = 43 %}
+{{ temp }}
+{% endwith %}
+{% endraw %}
+</body>
+</html>

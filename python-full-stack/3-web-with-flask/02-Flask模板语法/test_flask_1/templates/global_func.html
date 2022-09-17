@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模板中全局函数的使用</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style type="text/css">
+        .row1 {
+            color: #ff0000;
+        }
+
+        .row2 {
+            color: #00f; /*RGB**/
+        }
+
+        .row3 {
+            background-color: aquamarine;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<h3>range函数的使用</h3>
+{% for i in range(5) %}
+<p>{{ i }}</p>
+{% endfor %}
+
+<h3>url_for的使用</h3>
+<a href="{{ url_for('index') }}">回到首页</a>
+<a href="{{ url_for('tag') }}">跳转到标签练习页面</a>
+<a href="/tag">跳转到标签练习页面</a>
+
+<h3>cycler函数的使用</h3>
+{% set class_name = cycler('row1', 'row2', 'row3') %}
+{% for i in range(100) %}
+<p class="{{ class_name.next() }}">{{ i }}</p>
+{% endfor %}
+
+
+</body>
+</html>
